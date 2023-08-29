@@ -1,10 +1,16 @@
+import {ReactComponent as Bell} from "../Resources/bell.svg";
+import {ReactComponent as Settings} from "../Resources/settings.svg";
+import {ReactComponent as User} from "../Resources/user.svg";
+import {Link} from "react-router-dom";
+
 function TopRibbon(){
     return(
         <div className="top-ribbon">
-            <div>
-
-            </div>
-            <img src="" alt="AL"/>
+            <Bell className="icons"/>
+            <Settings className="icons"/>
+            <Link to="/account">
+                <User className="icons"/>
+            </Link>
         </div>
     );
 };
