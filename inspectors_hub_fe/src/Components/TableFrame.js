@@ -1,18 +1,20 @@
 function TableFrame(props){
     return(
         <div>
-            <table>
+            <table className="tables">
                 <thead>
-                    {props.header.forEach(element => {
-                        <th>{element}</th>
-                    })};
+                    {Object.keys(props.myData[0]).map((c,i)=>{
+                      return  <th key={i}>{c}</th>
+                    })}
                 </thead>
                 <tbody>
-                    <tr>
-                        {props.row_item.forEach(item=>{
-                            <td>{item}</td>
+                    {Object.keys(props.myData).map((row,row_index)=>{
+                        return<tr key={row_index}>
+                        {Object.keys(props.myData[row_index]).map((cell_value,cell_index)=>{
+                            return  <td key={cell_index}>{props.myData[row_index][cell_value]}</td>
                         })}
-                    </tr>
+                        </tr>
+                    })}
                 </tbody>
             </table>
         </div>
