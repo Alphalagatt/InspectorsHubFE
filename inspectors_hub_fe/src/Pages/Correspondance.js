@@ -1,10 +1,10 @@
 import TitleBar from "../Components/TitleBar";
 
-function Correspondence(){
+function Correspondence(props){
     return(
         <div className="pages">
-            <TitleBar Title="Correnspondence"/>
-            This is where the Correspondence go..
+            <TitleBar Title="Correspondence"/>
+            The Correnspondence information goes here..
         </div>
     );
 };
