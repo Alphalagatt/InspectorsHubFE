@@ -228,6 +228,5 @@ img{
   
 }
 .answers_radio{
-  display: flex;
   justify-content: space-around;
 }
